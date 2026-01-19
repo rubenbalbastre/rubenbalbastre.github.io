@@ -2,6 +2,5 @@
 
 ## Navegación
 
-- [Sobre mí](/about/)
-- [CV](/cv/)
+- [CV](/about/)
 - [Blog](/blog/)
