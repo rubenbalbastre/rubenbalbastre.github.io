@@ -3,4 +3,4 @@
 ## Navegación
 
 - [CV](/about/)
-- [Blog](/blog/)
+- [Blog: El Rincón de Pensar](/blog/)
