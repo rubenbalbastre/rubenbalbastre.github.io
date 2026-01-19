@@ -1,4 +1,3 @@
-# rubenbalbastre.github.io
 
 ## Navegación
 
