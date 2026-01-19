@@ -10,7 +10,7 @@ En este blog encontrarás mis reflexiones sobre el mundo de la inteligencia arti
 
 
 - [AI Labs: en busca del ROI](/blog/2026_01/) Enero de 2026
-- [¿Agotamiento financiero o estrategia premeditada?](blog/2025_12/)  Diciembre de 2025
+- [¿Agotamiento financiero o estrategia premeditada?](/blog/2025_12/)  Diciembre de 2025
 - [Los fantasmas acechan. ¿Las Big Tech se despiertan?](/blog/2025_11/) Noviembre de 2025.
 - [“We’re not selling agents — we’re selling poor imitators.”](/blog/2025_10/)  Octubre de 2025
 - [¿IA o colapso? Escenarios para un sistema monetario al borde del ajuste.](/blog/2025_09/)  Septiembre de 2025
