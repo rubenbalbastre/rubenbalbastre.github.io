@@ -19,7 +19,7 @@ En este blog encontrarás mis reflexiones sobre el mundo de la inteligencia arti
 - [IA y libertad](/blog/2025_05/)  - mayo de 2025
 - [Código Abierto, Poder Cerrado](/blog/2025_04/)  - abril de 2025
 - [Si puedo poner un “if else” en código, ¿para qué necesito un agente?](/blog/2025_03/)  - marzo de 2025
--[ Salidas estructuradas en sistemas de agentes](/blog/2025_02/)  - febrero de 2025
+- [Salidas estructuradas en sistemas de agentes](/blog/2025_02/)  - febrero de 2025
 - [MLOps en TXSE](/blog/2024_11/)  - noviembre de 2024
 - [La IA entre Israel y Gaza](/blog/2024_10/)  - 21 de octubre de 2024
 - [¿Guerra FrIA?](/blog/2024_09/)  - 21 de septiembre de 2024
