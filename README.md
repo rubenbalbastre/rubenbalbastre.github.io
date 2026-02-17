@@ -7,5 +7,4 @@ This is my personal website. It hosts my curriculum vitae (updated regularly), a
 
 ## Contents
 
-- [CV](/about/)
 - [Personal Blog: *El Rincón de Pensar*](/blog/)
