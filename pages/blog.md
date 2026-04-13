@@ -9,6 +9,7 @@ permalink: /blog/
 En este blog encontrarás mis reflexiones sobre el mundo de la inteligencia artificial, especialmente sobre las consecuencias que pueden tener los rápidos avances que se producen. Estos escritos son mis aportaciones personales a la newsletter [“El rincón de los datos”](https://www.linkedin.com/newsletters/el-rinc%25C3%25B3n-de-los-datos-7062699750055157760/), creada por la escuela de formación [Datamecum](https://datamecum.com/) coordinada por el profesor [Emilio Soria Olivas](https://www.linkedin.com/in/emiliosoriaolivas/).
 
 
+- ["No es el modelo, es el entorno"](/blog/2026_04/) Abril de 2026
 - ["Todos los datos son iguales, pero algunos son más fáciles que otros"](/blog/2026_03/) Marzo de 2026
 - [¿OpenClaw, OpenAI y …?](/blog/2026_02/) Febrero de 2026
 - [AI Labs: en busca del ROI](/blog/2026_01/) Enero de 2026
