@@ -9,6 +9,7 @@ permalink: /blog/
 En este blog encontrarás mis reflexiones sobre el mundo de la inteligencia artificial, especialmente sobre las consecuencias que pueden tener los rápidos avances que se producen. Estos escritos son mis aportaciones personales a la newsletter [“El rincón de los datos”](https://www.linkedin.com/newsletters/el-rinc%25C3%25B3n-de-los-datos-7062699750055157760/), creada por la escuela de formación [Datamecum](https://datamecum.com/) coordinada por el profesor [Emilio Soria Olivas](https://www.linkedin.com/in/emiliosoriaolivas/).
 
 
+- ["El entorno no es un dataset: es una máquina de composición"](/blog/2026_07/) Julio de 2026
 - ["Por qué AlphaGo entendía mejor el aprendizaje por refuerzo que los modelos de lenguaje"](/blog/2026_06/) Junio de 2026
 - ["Microsoft tiene Office, pero puede perder la oficina"](/blog/2026_05/) Mayo de 2026
 - ["No es el modelo, es el entorno"](/blog/2026_04/) Abril de 2026
