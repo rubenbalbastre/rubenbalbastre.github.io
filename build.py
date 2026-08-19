@@ -233,39 +233,45 @@ def home_html(posts: list[BlogPost]) -> str:
         for post in posts[:4]
     )
 
-    content = f"""<section class="home-hero">
-  <div>
-    <p class="eyebrow">Artificial intelligence · MLOps · Agent systems</p>
-    <h1>{html.escape(SITE_TITLE)}</h1>
-    <div class="hero-actions">
-      <a class="button" href="/cv/">View CV</a>
-      <a class="button secondary" href="/blog/">Read blog</a>
+    content = f"""<section class="home-hero-band">
+  <div class="home-hero">
+    <div>
+      <p class="eyebrow">Artificial intelligence · MLOps · Agent systems</p>
+      <h1>{html.escape(SITE_TITLE)}</h1>
+      <p class="hero-positioning">AI/ML engineer researching LLM post-training and building agentic systems for industry.</p>
+      <div class="hero-actions">
+        <a class="button" href="/cv/">View CV</a>
+        <a class="button secondary" href="/blog/">Read blog</a>
+      </div>
     </div>
+    <figure class="hero-visual">
+      <img src="/assets/images/profile_image.jpeg" alt="Portrait of Rubén Balbastre">
+      <figcaption>LLM post-training research, applied ML, and industrial agentic systems.</figcaption>
+    </figure>
   </div>
-  <figure class="hero-visual">
-    <img src="/assets/images/profile_image.jpeg" alt="Portrait of Rubén Balbastre">
-    <figcaption>AI/ML engineer working on LLM post-training research and industrial agentic systems.</figcaption>
-  </figure>
 </section>
 
 <section class="section">
   <div class="section-inner">
     <div class="section-heading">
-      <h2>Focus</h2>
-      <p>A compact view of what I work on, what I have built, and what I write about.</p>
+      <h2>What I Work On</h2>
+      <p>Three threads connect my current research, industry experience, and technical writing.</p>
     </div>
     <div class="feature-grid">
       <div class="feature">
         <h3>LLM Post-Training Research</h3>
-        <p>Current research on reinforcement learning for LLM unlearning, with emphasis on GRPO/RLVR, reward design, and evaluation reliability.</p>
+        <p>Research on GRPO/RLVR-style LLM unlearning, reward design, and evaluation reliability.</p>
+        <a href="https://arxiv.org/abs/2608.17804">Read the arXiv paper</a>
       </div>
       <div class="feature">
         <h3>Agentic Systems in Industry</h3>
-        <p>Enterprise experience building LLM-based agentic workflows, RAG systems, forecasting models, simulations, and decision-support tools.</p>
+        <p>Enterprise experience building supply-chain decision support with LLM agents, RAG, knowledge graphs, forecasting, and simulations.</p>
+        <a href="/cv/">See industry experience</a>
       </div>
       <div class="feature">
-        <h3>Personal Curiosities</h3>
-        <p>Writing about AI as technical, economic, and political infrastructure: labs, markets, energy, open source, and digital sovereignty.</p>
+        <h3>Technical Writing</h3>
+        <p>Spanish essays on AI as technical, economic, and political infrastructure: labs, markets, energy, open source, and digital sovereignty.</p>
+        <a href="/blog/">Browse the blog</a>
       </div>
     </div>
   </div>
@@ -300,22 +306,37 @@ def post_excerpt(post: BlogPost) -> str:
 
 
 def blog_index_html(posts: list[BlogPost]) -> str:
-    items = "\n".join(
-        f"""  <li>
-    <a href="/blog/{post.slug}/">{html.escape(post.title)}</a>
-    <span>{html.escape(post.date)}</span>
-  </li>"""
-        for post in posts
-    )
+    groups: dict[str, list[BlogPost]] = {}
+    for post in posts:
+        year = post.slug.split("_", 1)[0]
+        groups.setdefault(year, []).append(post)
+
+    year_sections = []
+    for year in sorted(groups, reverse=True):
+        items = "\n".join(
+            f"""    <li>
+      <a href="/blog/{post.slug}/">{html.escape(post.title)}</a>
+      <span>{html.escape(post.date)}</span>
+    </li>"""
+            for post in groups[year]
+        )
+        year_sections.append(
+            f"""<section class="blog-year">
+  <h2>{html.escape(year)}</h2>
+  <ul class="blog-list">
+{items}
+  </ul>
+</section>"""
+        )
+
+    grouped_posts = "\n\n".join(year_sections)
     content = f"""<header class="blog-index-header">
   <p class="blog-kicker">Blog</p>
   <h1>El rincón de pensar</h1>
   <p>Reflexiones sobre inteligencia artificial, tecnología y sus consecuencias prácticas. Estos escritos son mis aportaciones personales a la newsletter <a href="https://www.linkedin.com/newsletters/el-rinc%25C3%25B3n-de-los-datos-7062699750055157760/">“El rincón de los datos”</a>, creada por <a href="https://datamecum.com/">Datamecum</a> y coordinada por <a href="https://www.linkedin.com/in/emiliosoriaolivas/">Emilio Soria Olivas</a>.</p>
 </header>
 
-<ul class="blog-list">
-{items}
-</ul>"""
+{grouped_posts}"""
     return page("El rincón de pensar", content, lang="es", extra_class="blog-index")
 
 
