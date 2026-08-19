@@ -31,4 +31,3 @@ Then open `http://127.0.0.1:8000`.
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/)
-- [GitHub](https://github.com/rubenbalbastre)
