@@ -1,0 +1,166 @@
+---
+layout: page
+title: CV
+permalink: /cv/
+description: "Professional CV of Rubén Balbastre."
+wide: true
+---
+
+<section class="cv-hero">
+  <div>
+    <p class="cv-kicker">AI/ML Engineer</p>
+    <h1>Rubén Balbastre</h1>
+    <p>LLM systems, post-training research, agentic workflows, and applied machine learning in enterprise settings.</p>
+  </div>
+  <div class="cv-links" aria-label="CV links">
+    <a href="https://github.com/rubenbalbastre">GitHub</a>
+    <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Professional Summary</h2>
+  <div>
+    <p>AI/ML Engineer with experience building LLM-based systems, RAG applications, multi-agent workflows, and applied ML tools in enterprise settings. I have worked on knowledge graphs, decision-support systems, forecasting models, and simulation tools, mainly in supply chain contexts.</p>
+    <p>I am currently researching reinforcement learning for LLM unlearning, with a focus on GRPO/RLVR, reward design, and evaluation. I am interested in roles that combine hands-on engineering, model behavior analysis, and close collaboration with users to turn ambiguous problems into working AI systems.</p>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Selected Work</h2>
+  <div>
+    <div class="cv-item">
+      <h3><a href="https://arxiv.org/abs/2608.17804">GRPO-based LLM unlearning research</a></h3>
+      <p class="cv-meta">LLM post-training · Reward design · Evaluation</p>
+      <p>Empirical study of reward specification and benchmark reliability for reinforcement-learning-based LLM unlearning.</p>
+    </div>
+    <div class="cv-item">
+      <h3>LLM multi-agent supply-chain decision support</h3>
+      <p class="cv-meta">Accenture · Agentic systems · Knowledge graphs</p>
+      <p>R&D of an enterprise system combining agents, retrieval, knowledge graphs, and tool use for supply-chain decision support.</p>
+    </div>
+    <div class="cv-item">
+      <h3>RAG data-quality application</h3>
+      <p class="cv-meta">Accenture · RAG · Duplicate detection</p>
+      <p>Led development of an LLM/RAG application for duplicate detection and data quality workflows.</p>
+    </div>
+    <div class="cv-item">
+      <h3>Supply-chain simulation and optimization</h3>
+      <p class="cv-meta">Accenture · Simulation · Hidden risk</p>
+      <p>Built frameworks to model disruptions and hidden risk in supply-chain networks, including an MIT-published methodology.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Experience</h2>
+  <div>
+    <div class="cv-item">
+      <h3>AI Researcher</h3>
+      <p class="cv-meta">Universitat de Valencia · Valencia, Spain · April 2026 - Present</p>
+      <ul>
+        <li>Researching reinforcement learning methods for LLM unlearning, including GRPO/RLVR-style training.</li>
+        <li>Designing reward functions and evaluation pipelines to study forgetting, leakage, refusal behavior, and reward hacking.</li>
+        <li>Running experiments with open-weight instruction models using PyTorch, Hugging Face Transformers, TRL, LoRA, and Weights & Biases.</li>
+        <li>Working on practical questions around how LLMs behave when optimized with imperfect rewards.</li>
+      </ul>
+    </div>
+    <div class="cv-item">
+      <h3>Senior ML/AI Engineer</h3>
+      <p class="cv-meta">Accenture · Madrid, Spain · May 2025 - Dec 2025</p>
+      <ul>
+        <li>Led R&D of an LLM-based multi-agent system for supply chain decision support, using knowledge graphs, retrieval, and tool use.</li>
+        <li>Developed demand forecasting models using multi-output XGBoost.</li>
+        <li>Worked with technical and business stakeholders to define use cases, build prototypes, and explain technical trade-offs.</li>
+        <li>Co-supervised Master's theses related to language models.</li>
+      </ul>
+    </div>
+    <div class="cv-item">
+      <h3>Data Scientist / AI Engineer</h3>
+      <p class="cv-meta">Accenture · Madrid, Spain · Sept 2022 - Jan 2025</p>
+      <ul>
+        <li>Led R&D of a data quality application for duplicate detection using LLMs and RAG.</li>
+        <li>Built simulation and optimization frameworks to model supply chain disruptions and hidden risk, including an MIT-published methodology.</li>
+        <li>Developed ML monitoring and forecasting systems for aerospace suppliers.</li>
+      </ul>
+    </div>
+    <div class="cv-item">
+      <h3>Data Scientist Intern</h3>
+      <p class="cv-meta">Accenture · Madrid, Spain · Jun 2022 - Sep 2022</p>
+      <ul>
+        <li>Contributed to an internal machine learning time series forecasting library.</li>
+      </ul>
+    </div>
+    <div class="cv-item">
+      <h3>Astrophysics Researcher Intern</h3>
+      <p class="cv-meta">University of Valencia · Valencia, Spain · Oct 2020 - Apr 2021</p>
+      <ul>
+        <li>Researched star formation processes in large-scale cosmological structures.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Technical Skills</h2>
+  <div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>LLM / Agents</h3>
+        <p class="skill-list"><span>LLMs</span><span>RAG</span><span>LLM post-training</span><span>RLVR</span><span>LLM evaluation</span><span>Multi-agent systems</span><span>Knowledge graphs</span><span>LangGraph</span><span>OpenAI SDK</span></p>
+      </div>
+      <div class="skill-group">
+        <h3>ML Engineering</h3>
+        <p class="skill-list"><span>PyTorch</span><span>Hugging Face Transformers</span><span>TRL</span><span>XGBoost</span><span>Time series forecasting</span><span>Optimization</span><span>Simulations</span><span>PINNs</span></p>
+      </div>
+      <div class="skill-group">
+        <h3>Cloud / MLOps</h3>
+        <p class="skill-list"><span>AWS SageMaker</span><span>AWS Glue</span><span>Azure Databricks</span><span>Azure Functions</span><span>Palantir Foundry</span><span>Docker</span><span>Weights & Biases</span><span>MLflow</span></p>
+      </div>
+      <div class="skill-group">
+        <h3>Programming</h3>
+        <p class="skill-list"><span>Python</span><span>PySpark</span><span>Julia</span><span>SQL</span><span>CI/CD</span><span>OOP software design</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Education</h2>
+  <div>
+    <div class="cv-item">
+      <h3>M.Sc. in Data Science</h3>
+      <p class="cv-meta">University of Valencia · 2021 - 2023</p>
+      <p>Thesis: Application of Physics-Informed Neural Networks (PINNs) to recover binary black hole systems.</p>
+    </div>
+    <div class="cv-item">
+      <h3>B.Sc. in Physics</h3>
+      <p class="cv-meta">University of Valencia · 2017 - 2021</p>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Languages</h2>
+  <div>
+    <p>English (C1), Spanish (Native), Catalan (Native).</p>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Publications</h2>
+  <div>
+    <div class="cv-item">
+      <h3><a href="https://arxiv.org/abs/2608.17804">An Empirical Study of Reward Specification and Benchmark Reliability in GRPO-based LLM Unlearning</a></h3>
+      <p class="cv-meta">arXiv:2608.17804 · 2026</p>
+      <p>Rubén Balbastre, Juan Manuel Orduña, Mariano Pérez.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2>Writing</h2>
+  <div>
+    <p>Personal essays and technical reflections are available in <a href="/blog/">El rincón de pensar</a>.</p>
+  </div>
+</section>
