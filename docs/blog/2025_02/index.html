@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salidas estructuradas en sistemas de agentes | Rubén Balbastre</title>
+    <meta name="description" content="AI/ML engineering, LLM systems, MLOps, and technical writing.">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Rubén Balbastre">
+        <span class="brand-mark">RB</span>
+        <span>Rubén Balbastre</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/rubenbalbastre">GitHub</a>
+        <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="page-shell prose blog-post">
+<header class="blog-post-header">
+  <a class="back-link" href="/blog/">Blog</a>
+  <p class="blog-kicker">El rincón de pensar</p>
+  <h1>Salidas estructuradas en sistemas de agentes</h1>
+  <p class="blog-post-date">Febrero de 2025</p>
+</header>
+<div class="blog-post-body">
+<p>En relación con la última publicación donde hablábamos de los diferentes tipos de agentes, en este presentamos el problema de cómo extraer la respuesta de un agente en el formato deseado. Este tema es común y no es nuevo. Sin embargo, sí que es necesario mencionar que cuando utilizamos sistemas de agentes la solución a este problema es más urgente. En este escrito trataremos brevemente de explicar una forma de abordarlo.</p>
+<p>La idea de tener conversaciones entre agentes para solucionar un problema puede plantearse de manera general como:</p>
+<ul>
+<li>1 agente orquestador de la conversación: decide los turnos en los que cada agente interviene</li>
+<li>N Agentes especializados en tareas: los que intervienen en la conversación</li>
+<li>1 agente que extrae las conclusiones de la conversación.</li>
+</ul>
+<p>Una forma sencilla de establecer el fin de la conversación es imponer que se finalice cuando hable el agente que extrae las conclusiones. Esto tiene sentido sí le decimos al agente orquestador que el agente de la conclusiones debe intervenir cuando la conversación entre los N agentes especializados cumple una cierta condición.</p>
+<p>La respuesta que extraemos de la conversación será el último mensaje: el mensaje del agente que extrae las conclusiones. Esta salida podemos personalizarla y que venga en el formato tipo diccionario que nosotros queremos. Podemos hacer esto de manera sencilla utilizando la capacidad de los modelos GPT 4 (es posible que cuando leas esto haya otros modelos que lo permitan) y clases de Python que heredan de la librería pydantic.</p>
+<p>Todo ello resulta sencillo de implementarlo en Autogen. Dejo aquí unos enlaces de referencia:</p>
+<ul>
+<li>https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/selector-group-chat.html</li>
+</ul>
+<ul>
+<li>https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/components/model-clients.html [Sección “Structured Output”]</li>
+</ul>
+</div>
+</article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Rubén Balbastre. Published with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>

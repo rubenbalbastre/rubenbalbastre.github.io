@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¿OpenClaw, OpenAI y …? | Rubén Balbastre</title>
+    <meta name="description" content="AI/ML engineering, LLM systems, MLOps, and technical writing.">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Rubén Balbastre">
+        <span class="brand-mark">RB</span>
+        <span>Rubén Balbastre</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/rubenbalbastre">GitHub</a>
+        <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="page-shell prose blog-post">
+<header class="blog-post-header">
+  <a class="back-link" href="/blog/">Blog</a>
+  <p class="blog-kicker">El rincón de pensar</p>
+  <h1>¿OpenClaw, OpenAI y …?</h1>
+  <p class="blog-post-date">Febrero de 2026</p>
+</header>
+<div class="blog-post-body">
+<p>La relevancia del proyecto OpenClaw ha sido notable en el ecosistema de la inteligencia artificial. En una publicación anterior de la newsletter analizamos su arquitectura y funcionamiento. En esta segunda parte, abordamos sus implicaciones estratégicas.</p>
+<p>OpenClaw gira en torno a dos ideas fundamentales.</p>
+<p>Primero: los modelos de lenguaje actuales son lo suficientemente competentes como para orquestar herramientas sin haber sido entrenados explícitamente para cada una de ellas. El aprendizaje por contexto (in-context learning) permite inducir comportamientos complejos a partir de instrucciones y ejemplos, reduciendo la necesidad de entrenamiento específico.</p>
+<p>Segundo: su caso de uso natural es el asistente personal.</p>
+<p>Según explica su fundador, Peter Steinberger, en su entrevista con Lex Fridman, OpenClaw necesita modelos state-of-the-art para alcanzar un nivel operativo sólido. Aunque teóricamente podría ejecutarse con modelos open-source en local, en la práctica resulta más eficiente conectarse a una API de alto rendimiento. Especialmente si el objetivo es un asistente personal persistente y fiable. No podemos correr modelos de billones de parámetros en smartphones o portátiles. Por lo menos, no parece la mejor opción de manera estándar.</p>
+<p>He aquí donde empieza la partida de ajedrez.</p>
+<p>Diferentes AI Labs contactaron con Steinberger. Por lo que se ha comunicado, el proyecto seguirá siendo open source y la empresa ayudará al escalado de la solución. Por lo que comenta en la entrevista, Peter dudaba entre dos ofertas: Meta y OpenAI. Finalmente, la semana pasada se confirmó su fichaje por OpenAI.</p>
+<p>Ambas partes salen reforzadas. OpenClaw obtiene recursos para escalar infraestructura. OpenAI, por su parte, da un paso hacia algo más ambicioso que un modelo conversacional: un agente operativo persistente. Esto es relevante en un contexto donde Anthropic, con Claude Code, había comenzado a ganar tracción en ciertos flujos técnicos y de programación. La carrera ya no es únicamente por el mejor modelo, sino por el mejor sistema agente.</p>
+<p>Sin embargo, sigue faltando una pieza crítica. OpenClaw es el “sistema operativo” y OpenAI proporciona “el mejor cerebro” pero… ¿dónde vive? OpenClaw se enorgullece de decir que corre tanto en Windows como Mac como Linux. Pero el gran público no vive frente al ordenador: vive frente al teléfono. Aquí falta un jugador.</p>
+<p>Apple controla el hardware y el sistema operativo móvil más rentable del mundo. Google controla Android, además de disponer de su propio modelo con Gemini y hardware Pixel. ¿Puede ser que Apple despierte de su letargo finalmente? Si el asistente personal es la próxima gran interfaz, quien controle el dispositivo móvil controla la distribución. OpenAI puede liderar la inteligencia. Pero sin integración profunda en el sistema operativo móvil, su alcance dependerá de terceros. Y ahí está la incógnita estratégica.</p>
+<p>Como apéndice conceptual, merece la pena recordar la reflexión de Dario Amodei, CEO de Antrophic, en conversación con Dwarkesh Patel sobre aprendizaje continuo frente a aprendizaje por contexto. Amodei sugería que, si los modelos generalizan suficientemente bien y ampliamos la ventana de contexto, el aprendizaje por contexto podría ser suficiente para desbloquear una expansión económica significativa. Si ese argumento es correcto, los agentes como OpenClaw no necesitan un complejo sistema de continual learning. Bastaría con modelos cada vez más capaces y mayor contexto. Eso favorece a quienes lideran el entrenamiento de modelos fundacionales a gran escala.</p>
+<p>El terremoto apenas comienza.</p>
+<p><img src="/assets/images/blog_2026_02.png" alt="Diagrama del modelo"></p>
+<p>Enlaces:</p>
+<ul>
+<li><a href="https://openclaw.ai/">OpenClaw (sitio oficial)</a></li>
+<li><a href="https://www.youtube.com/watch?v=YFjfBk8HI5o">OpenClaw en Lex Fridman (entrevista completa)</a></li>
+<li><a href="https://www.reuters.com/business/openclaw-founder-steinberger-joins-openai-open-source-bot-becomes-foundation-2026-02-15/">Reuters: OpenClaw y OpenAI (15 de febrero de 2026)</a></li>
+<li><a href="https://www.youtube.com/watch?v=n1E9IZfvGMA">Dario Amodei en Dwarkesh Patel (entrevista)</a></li>
+</ul>
+</div>
+</article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Rubén Balbastre. Published with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>
