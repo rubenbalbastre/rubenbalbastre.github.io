@@ -12,10 +12,6 @@ wide: true
     <p class="cv-role">AI Research Engineer</p>
     <p class="cv-specialization">LLM post-training, reinforcement learning, and agentic systems.</p>
   </div>
-  <div class="cv-links" aria-label="CV links">
-    <a href="https://github.com/rubenbalbastre">GitHub</a>
-    <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
-  </div>
 </section>
 
 <section class="cv-section">
