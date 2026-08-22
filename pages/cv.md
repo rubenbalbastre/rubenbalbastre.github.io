@@ -8,9 +8,9 @@ wide: true
 
 <section class="cv-hero">
   <div>
-    <p class="cv-kicker">AI/ML Engineer</p>
     <h1>Rubén Balbastre</h1>
-    <p>LLM systems, post-training research, agentic workflows, and applied machine learning in enterprise settings.</p>
+    <p class="cv-role">AI Research Engineer</p>
+    <p class="cv-specialization">LLM post-training, reinforcement learning, and agentic systems.</p>
   </div>
   <div class="cv-links" aria-label="CV links">
     <a href="https://github.com/rubenbalbastre">GitHub</a>
@@ -21,16 +21,25 @@ wide: true
 <section class="cv-section">
   <h2>Professional Summary</h2>
   <div>
-    <p>AI/ML Engineer with experience building LLM-based systems, RAG applications, multi-agent workflows, and applied ML tools in enterprise settings. I have worked on knowledge graphs, decision-support systems, forecasting models, and simulation tools, mainly in supply chain contexts.</p>
-    <p>I am currently researching reinforcement learning for LLM unlearning, with a focus on GRPO/RLVR, reward design, and evaluation. I am interested in roles that combine hands-on engineering, model behavior analysis, and close collaboration with users to turn ambiguous problems into working AI systems.</p>
+    <p>AI Research Engineer with experience in LLM post-training, RAG, multi-agent systems, and applied machine learning. Currently researching reinforcement learning for LLM unlearning, with a focus on GRPO/RLVR, reward specification, evaluation, and reward hacking.</p>
   </div>
 </section>
 
 <section class="cv-section">
-  <h2>Selected Work</h2>
+  <h2>Publications</h2>
   <div>
     <div class="cv-item">
-      <h3><a href="https://arxiv.org/abs/2608.17804">GRPO-based LLM unlearning research</a></h3>
+      <h3><a href="https://rubenbalbastre.github.io/grpo-unlearning-reward-specification/">An Empirical Study of Reward Specification and Benchmark Reliability in GRPO-based LLM Unlearning</a></h3>
+      <p class="cv-meta">arXiv:2608.17804 · 2026</p>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section selected-work">
+  <h2>Selected Work</h2>
+  <div class="selected-work-grid">
+    <div class="cv-item">
+      <h3><a href="https://rubenbalbastre.github.io/grpo-unlearning-reward-specification/">GRPO-based LLM unlearning research</a></h3>
       <p class="cv-meta">LLM post-training · Reward design · Evaluation</p>
       <p>Empirical study of reward specification and benchmark reliability for reinforcement-learning-based LLM unlearning.</p>
     </div>
@@ -38,16 +47,6 @@ wide: true
       <h3>LLM multi-agent supply-chain decision support</h3>
       <p class="cv-meta">Accenture · Agentic systems · Knowledge graphs</p>
       <p>R&D of an enterprise system combining agents, retrieval, knowledge graphs, and tool use for supply-chain decision support.</p>
-    </div>
-    <div class="cv-item">
-      <h3>RAG data-quality application</h3>
-      <p class="cv-meta">Accenture · RAG · Duplicate detection</p>
-      <p>Led development of an LLM/RAG application for duplicate detection and data quality workflows.</p>
-    </div>
-    <div class="cv-item">
-      <h3>Supply-chain simulation and optimization</h3>
-      <p class="cv-meta">Accenture · Simulation · Hidden risk</p>
-      <p>Built frameworks to model disruptions and hidden risk in supply-chain networks, including an MIT-published methodology.</p>
     </div>
   </div>
 </section>
@@ -59,20 +58,18 @@ wide: true
       <h3>AI Researcher</h3>
       <p class="cv-meta">Universitat de Valencia · Valencia, Spain · April 2026 - Present</p>
       <ul>
-        <li>Researching reinforcement learning methods for LLM unlearning, including GRPO/RLVR-style training.</li>
+        <li>Investigating GRPO/RLVR-based methods for LLM unlearning, focusing on reward specification and robustness of forget/retain behavior.</li>
         <li>Designing reward functions and evaluation pipelines to study forgetting, leakage, refusal behavior, and reward hacking.</li>
-        <li>Running experiments with open-weight instruction models using PyTorch, Hugging Face Transformers, TRL, LoRA, and Weights & Biases.</li>
-        <li>Working on practical questions around how LLMs behave when optimized with imperfect rewards.</li>
+        <li>Conducting controlled post-training experiments on open-weight instruction models using PyTorch, Transformers, TRL, LoRA, and Weights & Biases.</li>
       </ul>
     </div>
     <div class="cv-item">
       <h3>Senior ML/AI Engineer</h3>
       <p class="cv-meta">Accenture · Madrid, Spain · May 2025 - Dec 2025</p>
       <ul>
-        <li>Led R&D of an LLM-based multi-agent system for supply chain decision support, using knowledge graphs, retrieval, and tool use.</li>
+        <li>Led R&D of an LLM-based multi-agent system for supply-chain decision support using knowledge graphs, RAG, and tool calling.</li>
         <li>Developed demand forecasting models using multi-output XGBoost.</li>
-        <li>Worked with technical and business stakeholders to define use cases, build prototypes, and explain technical trade-offs.</li>
-        <li>Co-supervised Master's theses related to language models.</li>
+        <li>Co-supervised Master’s theses related to language models.</li>
       </ul>
     </div>
     <div class="cv-item">
@@ -80,7 +77,7 @@ wide: true
       <p class="cv-meta">Accenture · Madrid, Spain · Sept 2022 - Jan 2025</p>
       <ul>
         <li>Led R&D of a data quality application for duplicate detection using LLMs and RAG.</li>
-        <li>Built simulation and optimization frameworks to model supply chain disruptions and hidden risk, including an MIT-published methodology.</li>
+        <li>Built simulation and optimization frameworks for supply-chain disruption and hidden-risk modeling, implementing a methodology published by MIT researchers.</li>
         <li>Developed ML monitoring and forecasting systems for aerospace suppliers.</li>
       </ul>
     </div>
@@ -95,13 +92,13 @@ wide: true
       <h3>Astrophysics Researcher Intern</h3>
       <p class="cv-meta">University of Valencia · Valencia, Spain · Oct 2020 - Apr 2021</p>
       <ul>
-        <li>Researched star formation processes in large-scale cosmological structures.</li>
+        <li>Researched star-formation processes in large-scale cosmological structures.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="cv-section">
+<section class="cv-section skills-section">
   <h2>Technical Skills</h2>
   <div>
     <div class="skill-groups">
@@ -144,23 +141,5 @@ wide: true
   <h2>Languages</h2>
   <div>
     <p>English (C1), Spanish (Native), Catalan (Native).</p>
-  </div>
-</section>
-
-<section class="cv-section">
-  <h2>Publications</h2>
-  <div>
-    <div class="cv-item">
-      <h3><a href="https://arxiv.org/abs/2608.17804">An Empirical Study of Reward Specification and Benchmark Reliability in GRPO-based LLM Unlearning</a></h3>
-      <p class="cv-meta">arXiv:2608.17804 · 2026</p>
-      <p>Rubén Balbastre, Juan Manuel Orduña, Mariano Pérez.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cv-section">
-  <h2>Writing</h2>
-  <div>
-    <p>Personal essays and technical reflections are available in <a href="/blog/">El rincón de pensar</a>.</p>
   </div>
 </section>

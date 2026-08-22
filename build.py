@@ -14,7 +14,7 @@ PAGES = ROOT / "pages"
 ASSETS = ROOT / "assets"
 
 SITE_TITLE = "Rubén Balbastre"
-SITE_DESCRIPTION = "AI/ML engineering, LLM systems, MLOps, and technical writing."
+SITE_DESCRIPTION = "AI research engineering, LLM post-training, agentic systems, and technical writing."
 
 
 @dataclass
@@ -177,15 +177,28 @@ def page(
     wide: bool = False,
     lang: str = "en",
     extra_class: str = "",
+    browser_title: str | None = None,
 ) -> str:
     shell_class = "page-shell page-shell-wide prose" if wide else "page-shell prose"
     if extra_class:
         shell_class = f"{shell_class} {extra_class}"
-    return layout(title, f'<article class="{shell_class}">\n{content}\n</article>', description, lang=lang)
+    return layout(
+        title,
+        f'<article class="{shell_class}">\n{content}\n</article>',
+        description,
+        lang=lang,
+        browser_title=browser_title,
+    )
 
 
-def layout(title: str, content: str, description: str = SITE_DESCRIPTION, lang: str = "en") -> str:
-    full_title = f"{title} | {SITE_TITLE}" if title else SITE_TITLE
+def layout(
+    title: str,
+    content: str,
+    description: str = SITE_DESCRIPTION,
+    lang: str = "en",
+    browser_title: str | None = None,
+) -> str:
+    full_title = browser_title or (f"{title} | {SITE_TITLE}" if title else SITE_TITLE)
     return f"""<!doctype html>
 <html lang="{html.escape(lang, quote=True)}">
   <head>
@@ -206,6 +219,7 @@ def layout(title: str, content: str, description: str = SITE_DESCRIPTION, lang: 
         <a href="/cv/">CV</a>
         <a href="/blog/">Blog</a>
         <a href="https://github.com/rubenbalbastre">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=QaOvwIQAAAAJ&amp;hl=en">Scholar</a>
         <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
       </nav>
     </header>
@@ -236,18 +250,17 @@ def home_html(posts: list[BlogPost]) -> str:
     content = f"""<section class="home-hero-band">
   <div class="home-hero">
     <div>
-      <p class="eyebrow">Artificial intelligence · MLOps · Agent systems</p>
+      <p class="eyebrow">AI Research Engineer · LLM Post-Training · Agentic Systems</p>
       <h1>{html.escape(SITE_TITLE)}</h1>
-      <p class="hero-positioning">AI/ML engineer researching LLM post-training and building agentic systems for industry.</p>
+      <p class="hero-positioning">I study how language models respond to post-training objectives and turn that understanding into dependable AI systems.</p>
       <div class="hero-actions">
         <a class="button" href="/cv/">View CV</a>
         <a class="button secondary" href="/blog/">Read blog</a>
       </div>
     </div>
-    <figure class="hero-visual">
+    <div class="hero-visual">
       <img src="/assets/images/profile_image.jpeg" alt="Portrait of Rubén Balbastre">
-      <figcaption>LLM post-training research, applied ML, and industrial agentic systems.</figcaption>
-    </figure>
+    </div>
   </div>
 </section>
 
@@ -261,7 +274,7 @@ def home_html(posts: list[BlogPost]) -> str:
       <div class="feature">
         <h3>LLM Post-Training Research</h3>
         <p>Research on GRPO/RLVR-style LLM unlearning, reward design, and evaluation reliability.</p>
-        <a href="https://arxiv.org/abs/2608.17804">Read the arXiv paper</a>
+        <a href="https://rubenbalbastre.github.io/grpo-unlearning-reward-specification/">Explore the project</a>
       </div>
       <div class="feature">
         <h3>Agentic Systems in Industry</h3>
@@ -290,7 +303,7 @@ def home_html(posts: list[BlogPost]) -> str:
 </section>
 """
 
-    return layout("Home", content, "Personal website of Rubén Balbastre, focused on AI/ML engineering, LLM systems, MLOps, and technical writing.")
+    return layout("Home", content, "Personal website of Rubén Balbastre, an AI Research Engineer focused on LLM post-training and agentic systems.")
 
 
 def post_excerpt(post: BlogPost) -> str:
@@ -375,7 +388,13 @@ def build() -> None:
     cv_source = parse_markdown(PAGES / "cv.md")
     write(
         OUT / "cv" / "index.html",
-        page("CV", markdown_to_html(cv_source.body), "Professional CV of Rubén Balbastre.", wide=True),
+        page(
+            "CV",
+            markdown_to_html(cv_source.body),
+            "Professional CV of Rubén Balbastre.",
+            wide=True,
+            browser_title=f"{SITE_TITLE} | AI Research Engineer",
+        ),
     )
 
     write(OUT / "blog" / "index.html", blog_index_html(posts))

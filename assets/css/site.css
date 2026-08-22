@@ -4,10 +4,7 @@
   --ink: #1f2328;
   --muted: #656d76;
   --line: #d8d2c4;
-  --accent: #a23b2a;
-  --accent-strong: #78281f;
-  --blue: #294b73;
-  --green: #4d6b53;
+  --accent: #8f3528;
   --shadow: 0 18px 45px rgba(31, 35, 40, 0.08);
 }
 
@@ -28,7 +25,7 @@ body {
 }
 
 a {
-  color: var(--accent-strong);
+  color: var(--accent);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
 }
@@ -120,7 +117,7 @@ img {
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: var(--green);
+  color: var(--muted);
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -189,12 +186,6 @@ img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #ece8df;
-}
-
-.hero-visual figcaption {
-  padding: 0.9rem 1rem 1rem;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .section {
@@ -304,11 +295,11 @@ img {
   flex-direction: column;
   gap: 0.8rem;
   min-height: 15rem;
-  border-top: 5px solid var(--accent);
+  border-top: 3px solid var(--ink);
 }
 
 .path-card:nth-child(2) {
-  border-top-color: var(--blue);
+  border-top-color: var(--muted);
 }
 
 .path-card a {
@@ -324,7 +315,7 @@ img {
 }
 
 .post-card .date {
-  color: var(--blue);
+  color: var(--muted);
   font-size: 0.9rem;
   font-weight: 800;
 }
@@ -336,7 +327,7 @@ img {
 
 .post-card a:hover,
 .post-card a:focus-visible {
-  color: var(--accent-strong);
+  color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
   outline: none;
@@ -344,7 +335,7 @@ img {
 
 .post-card .read-more {
   margin-top: auto;
-  color: var(--accent-strong);
+  color: var(--accent);
   font-weight: 800;
 }
 
@@ -357,7 +348,7 @@ img {
 }
 
 .page-shell-wide {
-  max-width: 1040px;
+  max-width: 1120px;
 }
 
 .prose {
@@ -430,7 +421,7 @@ img {
 
 .blog-kicker {
   margin: 0 0 0.55rem !important;
-  color: var(--green) !important;
+  color: var(--muted) !important;
   font-size: 0.8rem !important;
   font-weight: 850;
   letter-spacing: 0.08em;
@@ -451,7 +442,7 @@ img {
 
 .blog-year h2 {
   margin: 0;
-  color: var(--blue);
+  color: var(--ink);
   font-size: 0.95rem;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 900;
@@ -483,13 +474,13 @@ img {
 
 .blog-list a:hover,
 .blog-list a:focus-visible {
-  color: var(--accent-strong);
+  color: var(--accent);
   text-decoration: underline;
   outline: none;
 }
 
 .blog-list span {
-  color: var(--blue);
+  color: var(--muted);
   font-size: 0.9rem;
   font-weight: 850;
   white-space: nowrap;
@@ -512,7 +503,7 @@ img {
 
 .blog-post-date {
   margin: 1rem 0 0 !important;
-  color: var(--blue) !important;
+  color: var(--muted) !important;
   font-size: 0.95rem;
   font-weight: 850;
 }
@@ -534,7 +525,7 @@ img {
 
 .back-link:hover,
 .back-link:focus-visible {
-  color: var(--accent-strong);
+  color: var(--accent);
   outline: none;
 }
 
@@ -593,13 +584,17 @@ img {
   font-size: 1.08rem;
 }
 
-.cv-kicker {
-  margin: 0 0 0.55rem !important;
-  color: var(--green) !important;
-  font-size: 0.8rem !important;
+.cv-role {
+  margin-top: 0.8rem !important;
+  color: var(--ink) !important;
+  font-size: 1.3rem !important;
   font-weight: 850;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.cv-specialization {
+  margin-top: 0.5rem !important;
+  color: var(--muted) !important;
 }
 
 .cv-links {
@@ -612,40 +607,32 @@ img {
 .cv-links a {
   display: inline-flex;
   align-items: center;
-  min-height: 2.35rem;
-  padding: 0.45rem 0.7rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--ink);
-  background: #f7f5ef;
+  min-height: 2rem;
+  color: var(--accent);
   font-size: 0.92rem;
-  font-weight: 800;
-  text-decoration: none;
+  font-weight: 750;
 }
 
 .cv-links a:hover,
 .cv-links a:focus-visible {
-  color: #fff;
-  background: var(--ink);
-  border-color: var(--ink);
+  color: var(--accent);
   outline: none;
 }
 
 .cv-section {
   display: grid;
-  grid-template-columns: minmax(11rem, 0.25fr) minmax(0, 0.75fr);
+  grid-template-columns: 11rem minmax(0, 1fr);
   gap: clamp(1.25rem, 4vw, 2.5rem);
-  padding: 2rem 0;
-  border-top: 1px solid var(--line);
+  padding: 2.25rem 0;
 }
 
 .cv-section h2 {
   margin: 0;
-  color: var(--blue);
-  font-size: 0.92rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--ink);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.2;
 }
 
 .cv-section h3 {
@@ -654,59 +641,81 @@ img {
 }
 
 .cv-item {
-  padding-bottom: 1.2rem;
-  margin-bottom: 1.2rem;
-  border-bottom: 1px solid #ebe6da;
+  margin-bottom: 1.6rem;
 }
 
 .cv-item:last-child {
-  padding-bottom: 0;
   margin-bottom: 0;
-  border-bottom: 0;
 }
 
 .cv-meta {
   margin: 0 0 0.45rem;
-  color: var(--blue);
-  font-weight: 800;
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-weight: 600;
 }
 
-.skill-groups {
+.selected-work-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.skill-group {
-  min-width: 0;
-  padding: 1rem;
+.selected-work .cv-item {
+  margin: 0;
+  padding: 1.15rem;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
 }
 
+.skills-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.skills-section h2 {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  max-width: 48rem;
+}
+
+.skill-group {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: baseline;
+}
+
 .skill-group h3 {
-  margin: 0 0 0.65rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
   margin: 0 !important;
+  color: var(--muted) !important;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .skill-list span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.9rem;
-  padding: 0.28rem 0.55rem;
-  border: 1px solid #d8d2c4;
-  border-radius: 999px;
-  color: #343a40;
-  background: #f7f5ef;
-  font-size: 0.88rem;
-  font-weight: 720;
+  display: inline;
+}
+
+.skill-list span:not(:last-child)::after {
+  content: ", ";
 }
 
 .site-footer {
@@ -740,6 +749,7 @@ img {
   .cv-section,
   .cv-hero,
   .skill-groups,
+  .selected-work-grid,
   .blog-list li {
     grid-template-columns: 1fr;
   }
@@ -754,6 +764,11 @@ img {
 
   .cv-links {
     justify-content: flex-start;
+  }
+
+  .skill-group {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
   }
 
   .home-hero {
