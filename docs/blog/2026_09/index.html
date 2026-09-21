@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El “cuarto” eje de escalado | Rubén Balbastre</title>
+    <meta name="description" content="AI research engineering, LLM post-training, agentic systems, and technical writing.">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Rubén Balbastre">
+        <span class="brand-mark">RB</span>
+        <span>Rubén Balbastre</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/rubenbalbastre">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=QaOvwIQAAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="page-shell prose blog-post">
+<header class="blog-post-header">
+  <a class="back-link" href="/blog/">Blog</a>
+  <p class="blog-kicker">El rincón de pensar</p>
+  <h1>El “cuarto” eje de escalado</h1>
+  <p class="blog-post-date">Septiembre de 2026</p>
+</header>
+<div class="blog-post-body">
+<p><img src="/assets/images/blog_2026_09.png" alt="Diagrama del modelo"></p>
+<p>Las scaling laws de los modelos de lenguaje se han articulado tradicionalmente alrededor de tres variables: tamaño del modelo, cantidad de datos y cómputo. En los últimos años, además, el cómputo ha empezado a escalarse en distintos momentos del ciclo de vida del modelo: pre-training, post-training y, más recientemente, test-time scaling.</p>
+<p>Durante 2025, la receta de post-training de un modelo de lenguaje podía simplificarse en una combinación de aprendizaje supervisado (SFT), aprendizaje por preferencias —DPO y variantes— y aprendizaje por refuerzo —RLVR y otras variantes de RL—. Estas técnicas pueden aplicarse secuencialmente sobre conjuntos de datos distintos para desarrollar capacidades específicas, como razonamiento matemático, programación o uso de herramientas.</p>
+<p>La distillation on-policy (OPD) añade una pieza especialmente interesante a esta receta. En OPD, el modelo estudiante genera sus propias trayectorias y un modelo teacher más capaz proporciona una señal densa, token a token, sobre esas mismas trayectorias. De esta forma, se combina la distribución on-policy propia del aprendizaje por refuerzo con una señal de entrenamiento mucho más densa.</p>
+<p>Aunque la idea de OPD es anterior, durante 2026 hemos empezado a verla utilizada de una forma particularmente interesante en modelos frontera: entrenar mediante RL distintos modelos especializados —por ejemplo, en matemáticas, programación o tareas agénticas— y utilizar posteriormente Multi-Teacher On-Policy Distillation para integrar esas capacidades en un único modelo generalista.</p>
+<p>Esto permite desacoplar dos problemas que antes estaban unidos: descubrir una capacidad y conservarla dentro del modelo final. Diferentes jobs de RL pueden explorar en paralelo distintas direcciones de la policy space, mientras que una fase posterior de distillation trata de consolidar los mejores comportamientos encontrados.</p>
+<p>Aquí aparece una posible nueva forma de pensar sobre el escalado. Manteniendo fijo el tamaño del modelo desplegado, podemos aumentar el cómputo dedicado a desarrollar políticas especializadas y posteriormente comprimir sus capacidades en un único modelo. Todavía no existe evidencia suficiente para hablar de una cuarta scaling law en el mismo sentido que las scaling laws clásicas. Pero sí aparece una nueva pregunta de escalado:</p>
+<p>¿Hasta qué punto podemos aumentar las capacidades de un modelo de tamaño fijo incrementando el número, diversidad y cómputo dedicado a especialistas que posteriormente se consolidan?</p>
+<p>Quizá el nuevo eje no sea OPD en sí mismo, sino el specialist post-training compute que OPD permite aprovechar.</p>
+<ul>
+<li><a href="https://thinkingmachines.ai/blog/on-policy-distillation/">On Policy Distillation</a></li>
+</ul>
+<ul>
+<li><a href="https://arxiv.org/abs/2601.02780">MiMo-V2-Flash Technical Report - Multi-Teacher On Policy Distillation</a></li>
+</ul>
+<ul>
+<li><a href="https://research.nvidia.com/labs/nemotron/nemotron-cascade-2/">Nemotron Cascade 2</a></li>
+</ul>
+</div>
+</article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Rubén Balbastre. Published with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>
