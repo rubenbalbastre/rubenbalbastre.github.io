@@ -52,7 +52,7 @@ wide: true
   <div>
     <div class="cv-item">
       <h3>AI Researcher</h3>
-      <p class="cv-meta">Universitat de Valencia · Valencia, Spain · April 2026 - Present</p>
+      <p class="cv-meta">Universitat de Valencia · Valencia, Spain · April 2026 - August 2026</p>
       <ul>
         <li>Investigating GRPO/RLVR-based methods for LLM unlearning, focusing on reward specification and robustness of forget/retain behavior.</li>
         <li>Designing reward functions and evaluation pipelines to study forgetting, leakage, refusal behavior, and reward hacking.</li>
