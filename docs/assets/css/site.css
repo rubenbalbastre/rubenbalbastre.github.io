@@ -633,20 +633,6 @@ img {
   font-weight: 600;
 }
 
-.selected-work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.selected-work .cv-item {
-  margin: 0;
-  padding: 1.15rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-}
-
 .skills-section {
   padding-top: 1.9rem;
   padding-bottom: 1.9rem;
@@ -669,7 +655,7 @@ img {
 .skill-group {
   min-width: 0;
   display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr);
+  grid-template-columns: 13rem minmax(0, 1fr);
   gap: 1rem;
   align-items: baseline;
 }
@@ -727,7 +713,6 @@ img {
   .cv-section,
   .cv-hero,
   .skill-groups,
-  .selected-work-grid,
   .blog-list li {
     grid-template-columns: 1fr;
   }

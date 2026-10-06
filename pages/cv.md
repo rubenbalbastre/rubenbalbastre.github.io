@@ -31,22 +31,6 @@ wide: true
   </div>
 </section>
 
-<section class="cv-section selected-work">
-  <h2>Selected Work</h2>
-  <div class="selected-work-grid">
-    <div class="cv-item">
-      <h3><a href="https://rubenbalbastre.github.io/grpo-unlearning-reward-specification/">GRPO-based LLM unlearning research</a></h3>
-      <p class="cv-meta">LLM post-training · Reward design · Evaluation</p>
-      <p>Empirical study of reward specification and benchmark reliability for reinforcement-learning-based LLM unlearning.</p>
-    </div>
-    <div class="cv-item">
-      <h3>LLM multi-agent supply-chain decision support</h3>
-      <p class="cv-meta">Accenture · Agentic systems · Knowledge graphs</p>
-      <p>R&D of an enterprise system combining agents, retrieval, knowledge graphs, and tool use for supply-chain decision support.</p>
-    </div>
-  </div>
-</section>
-
 <section class="cv-section">
   <h2>Experience</h2>
   <div>
@@ -54,9 +38,10 @@ wide: true
       <h3>AI Researcher</h3>
       <p class="cv-meta">Universitat de Valencia · Valencia, Spain · April 2026 - August 2026</p>
       <ul>
-        <li>Investigating GRPO/RLVR-based methods for LLM unlearning, focusing on reward specification and robustness of forget/retain behavior.</li>
-        <li>Designing reward functions and evaluation pipelines to study forgetting, leakage, refusal behavior, and reward hacking.</li>
-        <li>Conducting controlled post-training experiments on open-weight instruction models using PyTorch, Transformers, TRL, LoRA, and Weights & Biases.</li>
+        <li>Investigated GRPO/RLVR-based LLM unlearning, with a focus on reward specification, robustness of forget/retain behavior, and failure modes such as reward hacking and over-refusal.</li>
+        <li>Designed lexical/verifiable and LLM-judged reward functions and evaluation pipelines to measure knowledge leakage, refusal behavior, retention, and reward exploitation.</li>
+        <li>Conducted controlled comparisons between cold-start RL and SFT-warm-started GRPO, analyzing the effect of initialization and reward formulation on training dynamics and model behavior.</li>
+        <li>Owned end-to-end SFT and GRPO/RLVR training runs on 1.5B/7B open-weight LLMs, from dataset and reward design through rollout generation, training, evaluation, and failure analysis, using PyTorch, Transformers, TRL, LoRA, and Weights & Biases.</li>
       </ul>
     </div>
     <div class="cv-item">
@@ -64,16 +49,17 @@ wide: true
       <p class="cv-meta">Accenture · Madrid, Spain · May 2025 - Dec 2025</p>
       <ul>
         <li>Led R&D of an LLM-based multi-agent system for supply-chain decision support using knowledge graphs, RAG, and tool calling.</li>
+        <li>Fine-tuned open-weight LLMs with Hugging Face and AWS SageMaker, and deployed them for inference through Amazon Bedrock.</li>
         <li>Developed demand forecasting models using multi-output XGBoost.</li>
-        <li>Co-supervised Master’s theses related to language models.</li>
+        <li>Co-supervised Master’s theses related to language models and applied AI research.</li>
       </ul>
     </div>
     <div class="cv-item">
       <h3>Data Scientist / AI Engineer</h3>
       <p class="cv-meta">Accenture · Madrid, Spain · Sept 2022 - Jan 2025</p>
       <ul>
-        <li>Led R&D of a data quality application for duplicate detection using LLMs and RAG.</li>
-        <li>Built simulation and optimization frameworks for supply-chain disruption and hidden-risk modeling, implementing a methodology published by MIT researchers.</li>
+        <li>Led R&D of an LLM-based data-quality system for duplicate detection using semantic retrieval, RAG, and language models.</li>
+        <li>Developed simulation and optimization frameworks for supply-chain disruption and hidden-risk modeling based on methodologies published by MIT researchers.</li>
         <li>Developed ML monitoring and forecasting systems for aerospace suppliers.</li>
       </ul>
     </div>
@@ -99,20 +85,32 @@ wide: true
   <div>
     <div class="skill-groups">
       <div class="skill-group">
-        <h3>LLM / Agents</h3>
-        <p class="skill-list"><span>LLMs</span><span>RAG</span><span>LLM post-training</span><span>RLVR</span><span>LLM evaluation</span><span>Multi-agent systems</span><span>Knowledge graphs</span><span>LangGraph</span><span>OpenAI SDK</span></p>
+        <h3>LLM Post-Training</h3>
+        <p class="skill-list"><span>SFT</span><span>RLVR/GRPO</span><span>LoRA</span><span>Reward Design</span><span>LLM Evaluation</span></p>
       </div>
       <div class="skill-group">
-        <h3>ML Engineering</h3>
-        <p class="skill-list"><span>PyTorch</span><span>Hugging Face Transformers</span><span>TRL</span><span>XGBoost</span><span>Time series forecasting</span><span>Optimization</span><span>Simulations</span><span>PINNs</span></p>
+        <h3>Agents &amp; Retrieval</h3>
+        <p class="skill-list"><span>RAG</span><span>Multi-Agent Systems</span><span>Tool Calling</span><span>LangGraph</span><span>FAISS</span></p>
       </div>
       <div class="skill-group">
-        <h3>Cloud / MLOps</h3>
-        <p class="skill-list"><span>AWS SageMaker</span><span>AWS Glue</span><span>Azure Databricks</span><span>Azure Functions</span><span>Palantir Foundry</span><span>Docker</span><span>Weights & Biases</span><span>MLflow</span></p>
+        <h3>Frameworks</h3>
+        <p class="skill-list"><span>PyTorch</span><span>Hugging Face Transformers</span><span>TRL</span></p>
+      </div>
+      <div class="skill-group">
+        <h3>ML &amp; Forecasting</h3>
+        <p class="skill-list"><span>Time Series Forecasting</span><span>XGBoost</span></p>
+      </div>
+      <div class="skill-group">
+        <h3>Cloud &amp; Infrastructure</h3>
+        <p class="skill-list"><span>Amazon Bedrock</span><span>AWS SageMaker</span><span>AWS Glue</span><span>Azure Databricks</span><span>Docker</span><span>vLLM</span><span>Palantir Foundry</span></p>
+      </div>
+      <div class="skill-group">
+        <h3>Experimentation &amp; Evaluation</h3>
+        <p class="skill-list"><span>Weights &amp; Biases</span><span>MLflow</span><span>Langfuse</span></p>
       </div>
       <div class="skill-group">
         <h3>Programming</h3>
-        <p class="skill-list"><span>Python</span><span>PySpark</span><span>Julia</span><span>SQL</span><span>CI/CD</span><span>OOP software design</span></p>
+        <p class="skill-list"><span>Python</span><span>SQL</span><span>PySpark</span></p>
       </div>
     </div>
   </div>
