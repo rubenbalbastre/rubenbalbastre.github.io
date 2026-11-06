@@ -253,7 +253,7 @@ def home_html(posts: list[BlogPost]) -> str:
     <div>
       <p class="eyebrow">AI Research Engineer · LLM Post-Training · Agentic Systems</p>
       <h1>{html.escape(SITE_TITLE)}</h1>
-      <p class="hero-positioning">I study how language models respond to post-training objectives and turn that understanding into dependable AI systems.</p>
+      <p class="hero-positioning">I lead the development of dependable agentic AI systems and study how language models respond to post-training objectives.</p>
       <div class="hero-actions">
         <a class="button" href="/cv/">View CV</a>
         <a class="button secondary" href="/blog/">Read blog</a>
@@ -269,7 +269,7 @@ def home_html(posts: list[BlogPost]) -> str:
   <div class="section-inner">
     <div class="section-heading">
       <h2>What I Work On</h2>
-      <p>Three threads connect my current research, industry experience, and technical writing.</p>
+      <p>Three threads connect my research background, current industry work, and technical writing.</p>
     </div>
     <div class="feature-grid">
       <div class="feature">
@@ -279,7 +279,7 @@ def home_html(posts: list[BlogPost]) -> str:
       </div>
       <div class="feature">
         <h3>Agentic Systems in Industry</h3>
-        <p>Enterprise experience building supply-chain decision support with LLM agents, RAG, knowledge graphs, forecasting, and simulations.</p>
+        <p>Leading AI engineering at Bravo Capital and building agentic systems for document retrieval, extraction, and analysis with OpenSearch and MCP.</p>
         <a href="/cv/">See industry experience</a>
       </div>
       <div class="feature">

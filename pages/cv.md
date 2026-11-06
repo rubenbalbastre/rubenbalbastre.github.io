@@ -17,7 +17,7 @@ wide: true
 <section class="cv-section">
   <h2>Professional Summary</h2>
   <div>
-    <p>AI Research Engineer specializing in LLM post-training, with experience in SFT, reinforcement learning (GRPO/RLVR), reward design, LLM evaluation, and LoRA fine-tuning. Recent research investigated reward specification and failure modes in LLM unlearning, including reward hacking, knowledge leakage, and refusal behavior. Prior industry experience includes fine-tuning open-weight LLMs and developing agentic and RAG-based systems.</p>
+    <p>AI Research Engineer specializing in LLM post-training and agentic systems. Currently Lead AI Engineer at Bravo Capital, leading a team of four and building AI systems for document retrieval, extraction, and analysis. Recent research investigated reward specification and failure modes in LLM unlearning, including reward hacking, knowledge leakage, and refusal behavior. Previous industry experience includes fine-tuning open-weight LLMs and developing agentic and RAG-based systems.</p>
   </div>
 </section>
 
@@ -34,6 +34,15 @@ wide: true
 <section class="cv-section">
   <h2>Experience</h2>
   <div>
+    <div class="cv-item">
+      <h3>Lead AI Engineer</h3>
+      <p class="cv-meta">Bravo Capital · October 2026 - Present</p>
+      <ul>
+        <li><strong>Leading the company’s AI engineering efforts and a team of four</strong>, combining technical leadership with hands-on development.</li>
+        <li>Designing and building <strong>agentic AI systems</strong> for document retrieval, extraction, and analysis using OpenSearch and Model Context Protocol (MCP).</li>
+        <li>Driving <strong>architectural decisions and engineering practices</strong> for scalable, reliable AI applications.</li>
+      </ul>
+    </div>
     <div class="cv-item">
       <h3>AI Researcher</h3>
       <p class="cv-meta">Universitat de Valencia · Valencia, Spain · April 2026 - August 2026</p>
@@ -90,7 +99,7 @@ wide: true
       </div>
       <div class="skill-group">
         <h3>Agents &amp; Retrieval</h3>
-        <p class="skill-list"><span>RAG</span><span>Multi-Agent Systems</span><span>Tool Calling</span><span>LangGraph</span><span>FAISS</span></p>
+        <p class="skill-list"><span>RAG</span><span>Multi-Agent Systems</span><span>Tool Calling</span><span>LangGraph</span><span>FAISS</span><span>OpenSearch</span><span>Model Context Protocol (MCP)</span></p>
       </div>
       <div class="skill-group">
         <h3>Frameworks</h3>
