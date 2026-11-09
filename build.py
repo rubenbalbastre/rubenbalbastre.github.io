@@ -400,11 +400,29 @@ def blog_post_html(post: BlogPost) -> str:
     source = parse_markdown(post.source)
     body = re.sub(r"^# .*\n?", "", source.body, count=1, flags=re.MULTILINE)
     body = re.sub(r"^## .*\n?", "", body, count=1, flags=re.MULTILINE)
-    content = f"""<header class="blog-post-header">
+    leading_image = re.match(r"\s*!\[([^\]]*)\]\(([^)]+)\)\s*", body)
+    header_class = "blog-post-header"
+    hero_media = ""
+    if leading_image:
+        alt_text, image_url = leading_image.groups()
+        image_url = image_url.replace("{{ site.baseurl }}", "")
+        hero_media = (
+            '  <div class="blog-post-hero-media">'
+            f'<img src="{html.escape(image_url, quote=True)}" '
+            f'alt="{html.escape(alt_text, quote=True)}" decoding="async">'
+            "</div>"
+        )
+        header_class += " blog-post-header-with-media"
+        body = body[leading_image.end():]
+
+    content = f"""<header class="{header_class}">
   <a class="back-link" href="/blog/">Blog</a>
-  <p class="blog-kicker">El rincón de pensar</p>
-  <h1>{html.escape(post.title)}</h1>
-  <p class="blog-post-date">{html.escape(post.date)}</p>
+  <div class="blog-post-heading">
+    <p class="blog-kicker">El rincón de pensar</p>
+    <h1>{html.escape(post.title)}</h1>
+    <p class="blog-post-date">{html.escape(post.date)}</p>
+  </div>
+{hero_media}
 </header>
 <div class="blog-post-body">
 {markdown_to_html(body)}

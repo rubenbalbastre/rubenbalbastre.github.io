@@ -26,14 +26,16 @@
 
     <main>
       <article class="page-shell prose blog-post">
-<header class="blog-post-header">
+<header class="blog-post-header blog-post-header-with-media">
   <a class="back-link" href="/blog/">Blog</a>
-  <p class="blog-kicker">El rincón de pensar</p>
-  <h1>Por qué AlphaGo entendía mejor el aprendizaje por refuerzo que los modelos de lenguaje</h1>
-  <p class="blog-post-date">Junio de 2026</p>
+  <div class="blog-post-heading">
+    <p class="blog-kicker">El rincón de pensar</p>
+    <h1>Por qué AlphaGo entendía mejor el aprendizaje por refuerzo que los modelos de lenguaje</h1>
+    <p class="blog-post-date">Junio de 2026</p>
+  </div>
+  <div class="blog-post-hero-media"><img src="/assets/images/blog_2026_06.png" alt="Diagrama del modelo" decoding="async"></div>
 </header>
 <div class="blog-post-body">
-<p><img src="/assets/images/blog_2026_06.png" alt="Diagrama del modelo" loading="lazy" decoding="async"></p>
 <p>El aprendizaje por refuerzo ha traído grandes avances en las capacidades de los modelos de lenguaje. Inicialmente en el alineamiento con técnicas de Reinforcement Learning from Human Feedback (RLHF) y posteriormente en tareas de programación, matemáticas y tareas agénticas mediante Reinforcement Learning from Verifiable Rewards (RLVR). De hecho, gran parte del cómputo destinado a entrenamiento se divide entre pre-entrenamiento y post-entrenamiento, ocupando RLVR gran proporción del mismo.</p>
 <p>El aprendizaje por refuerzo aplicado a modelos de lenguaje dista el marco general de aprendizaje en varios aspectos debido a la naturaleza de los modelos de lenguaje autorregresivos basados en la arquitectura transformer. En los modelos de lenguaje, definimos la recompensa al final de la generación de la respuesta y esto no pasa en otros dominios como juegos o robótica. Como ejercicio de comparación resultaría interesante compararlo con la receta seguida en 2017 en el proyecto de Google Deepmind AlphaGo y extraer reflexiones.</p>
 <p>¡Estamos de suerte! Recientemente, el investigador Eric Jang ha creado un proyecto open-source donde detalla los funcionamientos de AlphaGo desde un punto de vista “from-scratch” con herramientas modernas. También, ha realizado una entrevista donde explica a nivel técnico algunos aspectos teóricos del sistema y compara el aprendizaje por refuerzo allí aplicado con el actual.</p>
