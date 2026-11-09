@@ -948,31 +948,33 @@ img {
 
 .skill-groups {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.45rem;
-  max-width: 48rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.65rem 2.25rem;
+  max-width: 52rem;
 }
 
 .skill-group {
   min-width: 0;
-  display: grid;
-  grid-template-columns: 13rem minmax(0, 1fr);
-  gap: 1rem;
-  align-items: baseline;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.skill-group:nth-child(5) {
+  grid-column: 1 / -1;
 }
 
 .skill-group h3 {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 750;
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 800;
 }
 
 .skill-list {
   margin: 0 !important;
   color: #4d535a !important;
-  font-size: 0.92rem;
-  line-height: 1.5;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 .skill-list span {
@@ -1044,8 +1046,7 @@ img {
   }
 
   .skill-group {
-    grid-template-columns: 1fr;
-    gap: 0.1rem;
+    grid-column: auto;
   }
 
   .home-hero {
