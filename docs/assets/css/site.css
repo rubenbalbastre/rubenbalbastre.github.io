@@ -103,7 +103,9 @@ img {
 
 .home-hero-band {
   border-bottom: 1px solid var(--line);
-  background: var(--bg);
+  background:
+    linear-gradient(90deg, rgba(244, 243, 239, 0.82) 0%, rgba(244, 243, 239, 0.7) 38%, rgba(244, 243, 239, 0.28) 68%, rgba(244, 243, 239, 0.06) 100%),
+    url("/assets/images/background.jpeg") 32% center / cover no-repeat;
 }
 
 .home-hero {
@@ -1004,6 +1006,12 @@ img {
 }
 
 @media (max-width: 760px) {
+  .home-hero-band {
+    background:
+      linear-gradient(rgba(244, 243, 239, 0.72), rgba(244, 243, 239, 0.9)),
+      url("/assets/images/background.jpeg") 25% center / auto 100% no-repeat;
+  }
+
   .site-header {
     position: static;
     align-items: flex-start;
