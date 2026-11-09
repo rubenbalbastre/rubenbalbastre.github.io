@@ -240,6 +240,10 @@ img {
   padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
 }
 
+.work-band .section-heading {
+  grid-template-columns: 1fr;
+}
+
 .work-band {
   background: var(--surface);
 }

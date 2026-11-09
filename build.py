@@ -288,7 +288,6 @@ def home_html(posts: list[BlogPost]) -> str:
   <div class="section-inner">
     <div class="section-heading">
       <h2>What I Work On</h2>
-      <p>Three threads connect my research background, current industry work, and technical writing.</p>
     </div>
     <div class="feature-grid">
       <div class="feature">
