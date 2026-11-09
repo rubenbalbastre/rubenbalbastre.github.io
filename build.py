@@ -30,6 +30,7 @@ class BlogPost:
     slug: str
     title: str
     date: str
+    image_url: str | None
     body_html: str
 
 
@@ -55,7 +56,7 @@ def inline_markdown(text: str) -> str:
     text = re.sub(
         r"!\[([^\]]*)\]\(([^)]+)\)",
         lambda match: (
-            f'<img src="{match.group(2)}" alt="{html.escape(match.group(1), quote=True)}">'
+            f'<img src="{match.group(2)}" alt="{html.escape(match.group(1), quote=True)}" loading="lazy" decoding="async">'
         ),
         text,
     )
@@ -158,12 +159,14 @@ def load_blog_posts() -> list[BlogPost]:
         title = first_heading(page.body, 1)
         date = first_heading(page.body, 2)
         slug = permalink_slug(page)
+        image_path = ASSETS / "images" / f"blog_{slug}.png"
         posts.append(
             BlogPost(
                 source=path,
                 slug=slug,
                 title=title,
                 date=date,
+                image_url=f"/assets/images/blog_{slug}.png" if image_path.exists() else None,
                 body_html=markdown_to_html(page.body),
             )
         )
@@ -238,14 +241,30 @@ def layout(
 
 
 def home_html(posts: list[BlogPost]) -> str:
-    cards = "\n".join(
-        f"""      <article class="post-card">
+    featured = posts[0]
+    featured_image = (
+        f'<a class="post-card-media" href="/blog/{featured.slug}/" tabindex="-1" aria-hidden="true">'
+        f'<img src="{featured.image_url}" alt="" loading="lazy" decoding="async"></a>'
+        if featured.image_url
+        else ""
+    )
+    featured_card = f"""      <article class="post-card post-card-featured">
+        {featured_image}
+        <div class="post-card-body">
+          <span class="date">{html.escape(featured.date)}</span>
+          <h3><a href="/blog/{featured.slug}/">{html.escape(featured.title)}</a></h3>
+          <p>{html.escape(post_excerpt(featured))}</p>
+          <a class="read-more" href="/blog/{featured.slug}/">Read article</a>
+        </div>
+      </article>"""
+    secondary_cards = "\n".join(
+        f"""        <article class="post-card post-card-compact">
         <span class="date">{html.escape(post.date)}</span>
         <h3><a href="/blog/{post.slug}/">{html.escape(post.title)}</a></h3>
         <p>{html.escape(post_excerpt(post))}</p>
         <a class="read-more" href="/blog/{post.slug}/">Read article</a>
-      </article>"""
-        for post in posts[:4]
+        </article>"""
+        for post in posts[1:4]
     )
 
     content = f"""<section class="home-hero-band">
@@ -297,8 +316,11 @@ def home_html(posts: list[BlogPost]) -> str:
       <h2>Latest Writing</h2>
       <p>Recent Spanish essays from <em>El rincón de pensar</em>, my space for reflections on the evolution of artificial intelligence.</p>
     </div>
-    <div class="post-grid">
-{cards}
+    <div class="writing-grid">
+{featured_card}
+      <div class="post-stack">
+{secondary_cards}
+      </div>
     </div>
   </div>
 </section>
@@ -320,8 +342,9 @@ def post_excerpt(post: BlogPost) -> str:
 
 
 def blog_index_html(posts: list[BlogPost]) -> str:
+    featured = posts[0]
     groups: dict[str, list[BlogPost]] = {}
-    for post in posts:
+    for post in posts[1:]:
         year = post.slug.split("_", 1)[0]
         groups.setdefault(year, []).append(post)
 
@@ -344,13 +367,32 @@ def blog_index_html(posts: list[BlogPost]) -> str:
         )
 
     grouped_posts = "\n\n".join(year_sections)
+    featured_image = (
+        f'<a class="blog-featured-media" href="/blog/{featured.slug}/" tabindex="-1" aria-hidden="true">'
+        f'<img src="{featured.image_url}" alt="" loading="lazy" decoding="async"></a>'
+        if featured.image_url
+        else ""
+    )
     content = f"""<header class="blog-index-header">
   <p class="blog-kicker">Blog</p>
   <h1>El rincón de pensar</h1>
   <p>Reflexiones sobre inteligencia artificial, tecnología y sus consecuencias prácticas. Estos escritos son mis aportaciones personales a la newsletter <a href="https://www.linkedin.com/newsletters/el-rinc%25C3%25B3n-de-los-datos-7062699750055157760/">“El rincón de los datos”</a>, creada por <a href="https://datamecum.com/">Datamecum</a> y coordinada por <a href="https://www.linkedin.com/in/emiliosoriaolivas/">Emilio Soria Olivas</a>.</p>
 </header>
 
+<article class="blog-featured">
+  {featured_image}
+  <div class="blog-featured-body">
+    <p class="blog-kicker">Último artículo</p>
+    <p class="blog-featured-date">{html.escape(featured.date)}</p>
+    <h2><a href="/blog/{featured.slug}/">{html.escape(featured.title)}</a></h2>
+    <p>{html.escape(post_excerpt(featured))}</p>
+    <a class="read-more" href="/blog/{featured.slug}/">Leer artículo</a>
+  </div>
+</article>
+
+<div class="blog-archive">
 {grouped_posts}"""
+    content += "\n</div>"
     return page("El rincón de pensar", content, lang="es", extra_class="blog-index")
 
 

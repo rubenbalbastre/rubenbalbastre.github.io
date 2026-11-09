@@ -33,7 +33,7 @@
   <p class="blog-post-date">Septiembre de 2026</p>
 </header>
 <div class="blog-post-body">
-<p><img src="/assets/images/blog_2026_09.png" alt="Diagrama del modelo"></p>
+<p><img src="/assets/images/blog_2026_09.png" alt="Diagrama del modelo" loading="lazy" decoding="async"></p>
 <p>Las scaling laws de los modelos de lenguaje se han articulado tradicionalmente alrededor de tres variables: tamaño del modelo, cantidad de datos y cómputo. En los últimos años, además, el cómputo ha empezado a escalarse en distintos momentos del ciclo de vida del modelo: pre-training, post-training y, más recientemente, test-time scaling.</p>
 <p>Durante 2025, la receta de post-training de un modelo de lenguaje podía simplificarse en una combinación de aprendizaje supervisado (SFT), aprendizaje por preferencias —DPO y variantes— y aprendizaje por refuerzo —RLVR y otras variantes de RL—. Estas técnicas pueden aplicarse secuencialmente sobre conjuntos de datos distintos para desarrollar capacidades específicas, como razonamiento matemático, programación o uso de herramientas.</p>
 <p>La distillation on-policy (OPD) añade una pieza especialmente interesante a esta receta. En OPD, el modelo estudiante genera sus propias trayectorias y un modelo teacher más capaz proporciona una señal densa, token a token, sobre esas mismas trayectorias. De esta forma, se combina la distribución on-policy propia del aprendizaje por refuerzo con una señal de entrenamiento mucho más densa.</p>
