@@ -31,7 +31,7 @@ wide: true
   </div>
 </section>
 
-<section class="cv-section">
+<section class="cv-section experience-section">
   <h2>Experience</h2>
   <div>
     <div class="cv-item">

@@ -852,6 +852,39 @@ img {
   margin-bottom: 0;
 }
 
+.experience-section > div {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 1px solid var(--line);
+}
+
+.experience-section .cv-item {
+  position: relative;
+  margin-bottom: 2.35rem;
+}
+
+.experience-section .cv-item::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: -2rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  background: var(--bg);
+  transform: translateX(-50%);
+}
+
+.experience-section .cv-item:first-child::before {
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.experience-section .cv-item h3 {
+  font-size: 1.13rem;
+}
+
 .cv-meta {
   margin: 0 0 0.45rem;
   color: var(--muted);
