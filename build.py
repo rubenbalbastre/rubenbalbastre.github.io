@@ -272,7 +272,7 @@ def home_html(posts: list[BlogPost]) -> str:
     <div>
       <p class="eyebrow">AI Research Engineer · LLM Post-Training · Agentic Systems</p>
       <h1>{html.escape(SITE_TITLE)}</h1>
-      <p class="hero-positioning">I lead the development of dependable agentic AI systems and study how language models respond to post-training objectives.</p>
+      <p class="hero-positioning">I lead the development of agentic AI systems and study how language models respond to post-training objectives.</p>
       <div class="hero-actions">
         <a class="button" href="/cv/">View CV</a>
         <a class="button secondary" href="/blog/">Read blog</a>
