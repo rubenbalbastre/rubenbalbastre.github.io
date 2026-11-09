@@ -284,7 +284,7 @@ def home_html(posts: list[BlogPost]) -> str:
   </div>
 </section>
 
-<section class="section">
+<section class="section work-band">
   <div class="section-inner">
     <div class="section-heading">
       <h2>What I Work On</h2>

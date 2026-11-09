@@ -235,6 +235,11 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.work-band .section-inner {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+
 .path-grid,
 .contact-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -275,9 +280,17 @@ img {
 
 .feature a {
   display: inline-flex;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
   font-weight: 850;
   text-decoration: none;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  min-height: 14rem;
+  padding: 1.4rem;
 }
 
 .feature a:hover,
@@ -912,6 +925,7 @@ img {
   }
 
   .path-card,
+  .feature,
   .post-card {
     min-height: auto;
   }
