@@ -286,6 +286,10 @@ img {
   color: var(--muted);
 }
 
+.feature h3 {
+  font-size: 1.22rem;
+}
+
 .feature a {
   display: inline-flex;
   margin-top: auto;
