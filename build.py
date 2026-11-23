@@ -372,13 +372,14 @@ def blog_index_html(posts: list[BlogPost]) -> str:
         if featured.image_url
         else ""
     )
+    featured_class = "blog-featured" if featured.image_url else "blog-featured blog-featured-text-only"
     content = f"""<header class="blog-index-header">
   <p class="blog-kicker">Blog</p>
   <h1>El rincón de pensar</h1>
   <p>Reflexiones sobre inteligencia artificial, tecnología y sus consecuencias prácticas. Estos escritos son mis aportaciones personales a la newsletter <a href="https://www.linkedin.com/newsletters/el-rinc%25C3%25B3n-de-los-datos-7062699750055157760/">“El rincón de los datos”</a>, creada por <a href="https://datamecum.com/">Datamecum</a> y coordinada por <a href="https://www.linkedin.com/in/emiliosoriaolivas/">Emilio Soria Olivas</a>.</p>
 </header>
 
-<article class="blog-featured">
+<article class="{featured_class}">
   {featured_image}
   <div class="blog-featured-body">
     <p class="blog-kicker">Último artículo</p>

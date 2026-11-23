@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¿Y si los LLMs no necesitaran contextos tan largos? | Rubén Balbastre</title>
+    <meta name="description" content="AI research engineering, LLM post-training, agentic systems, and technical writing.">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Rubén Balbastre">
+        <span class="brand-mark">RB</span>
+        <span>Rubén Balbastre</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/rubenbalbastre">GitHub</a>
+        <a href="https://huggingface.co/rubenbalbastre">Hugging Face</a>
+        <a href="https://scholar.google.com/citations?user=QaOvwIQAAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://www.linkedin.com/in/rub%C3%A9n-balbastre-alcocer/">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="page-shell prose blog-post">
+<header class="blog-post-header blog-post-header-with-media">
+  <a class="back-link" href="/blog/">Blog</a>
+  <div class="blog-post-heading">
+    <p class="blog-kicker">El rincón de pensar</p>
+    <h1>¿Y si los LLMs no necesitaran contextos tan largos?</h1>
+    <p class="blog-post-date">Noviembre de 2026</p>
+  </div>
+  <div class="blog-post-hero-media"><img src="/assets/images/blog_2026_11.png" alt="Comparación entre conservar todo el contexto y resumir las ideas clave" decoding="async"></div>
+</header>
+<div class="blog-post-body">
+<p>Durante los últimos años hemos presenciado una carrera entre los principales laboratorios de inteligencia artificial por ampliar las ventanas de contexto de sus modelos. Hemos pasado de unos pocos miles de tokens a modelos capaces de procesar millones en una sola interacción.</p>
+<p>La lógica parece evidente: cuanto más contexto pueda procesar un modelo, más información tendrá disponible y mejores decisiones podrá tomar. Pero ¿es realmente así?</p>
+<p>Un reciente trabajo de NVIDIA, titulado <em>You Don&#x27;t Need Long Context</em>, cuestiona precisamente esta premisa. Sus resultados sugieren que los agentes pueden resolver tareas complejas utilizando mucho menos contexto del que habitualmente les proporcionamos.</p>
+<h3>¿Necesitamos recordarlo todo?</h3>
+<p>Imaginemos un agente encargado de desarrollar una aplicación. Durante su ejecución, examinará archivos, escribirá código, ejecutará pruebas y corregirá errores.</p>
+<p>Una aproximación habitual consiste en conservar todas estas interacciones dentro del contexto del modelo. Sin embargo, ¿necesita realmente recordar cada archivo consultado, cada comando ejecutado o cada error solucionado?</p>
+<p>NVIDIA compara esta estrategia con otras que comprimen periódicamente el historial, conservando la información necesaria para continuar trabajando.</p>
+<p>Los resultados son sorprendentes: en varias tareas complejas, los agentes mantienen un rendimiento similar incluso reduciendo drásticamente su historial. Además, trabajar con contextos más pequeños permite reducir significativamente los costes computacionales.</p>
+<p>Esto plantea una distinción fundamental: una tarea que requiere muchos pasos no necesariamente requiere recordar todos esos pasos.</p>
+<h3>Quizá el problema no esté en el modelo</h3>
+<p>Esta investigación conecta con una tendencia cada vez más relevante: los <em>agent harnesses</em>, es decir, los sistemas que rodean al modelo y gestionan sus herramientas, memoria y acceso a información.</p>
+<p>Tradicionalmente hemos centrado nuestros esfuerzos en mejorar las capacidades del propio modelo. Sin embargo, quizás estamos subestimando cuánto depende su rendimiento de la arquitectura que lo rodea.</p>
+<p>Pensemos en cómo trabajamos nosotros. No necesitamos recordar cada conversación o documento para desarrollar un proyecto durante meses. Utilizamos notas, recuperamos información cuando la necesitamos y mantenemos una idea relativamente compacta del estado de nuestro trabajo.</p>
+<p>¿Por qué debería un agente funcionar de forma diferente?</p>
+<p>Por supuesto, comprimir el contexto implica riesgos. Un resumen puede omitir información crítica. El objetivo no debería ser simplemente recordar menos, sino recordar mejor.</p>
+<h3>¿Y si especializamos la memoria?</h3>
+<p>Investigaciones como <em>Context Language Models</em> exploran la posibilidad de que los propios modelos aprendan a gestionar su contexto mediante aprendizaje por refuerzo.</p>
+<p>Pero hay otro factor que podría resultar especialmente interesante: la especialización por dominio.</p>
+<p>Un agente financiero no necesita recordar lo mismo que uno de programación o uno jurídico. Cada dominio tiene sus propias restricciones y necesidades de información.</p>
+<p>¿Por qué no incorporar modelos pequeños, especializados en resumir y gestionar el contexto de cada dominio? Estos podrían trabajar junto al modelo principal, conservando la información crítica y descartando aquella que ya no resulta relevante.</p>
+<p>Incluso podríamos entrenarlos para optimizar no la calidad del resumen, sino el rendimiento posterior del agente.</p>
+<p>Esto abre una posibilidad interesante: que parte del progreso de los agentes no venga de aumentar continuamente las capacidades de los modelos principales, sino de desarrollar sistemas especializados que les permitan aprovecharlas mejor.</p>
+<p>Quizá la siguiente frontera no sea cuánto contexto puede procesar un modelo, sino aprender qué merece la pena recordar.</p>
+<h3>Referencias</h3>
+<ul>
+<li><a href="https://arxiv.org/abs/2611.05306">You Don&#x27;t Need Long Context — NVIDIA (2026)</a>: investiga cómo reducir el contexto de los agentes mediante compactación sin comprometer significativamente su rendimiento en determinadas tareas.</li>
+<li><a href="https://arxiv.org/abs/2609.37725">Context Language Models (2026)</a></li>
+</ul>
+</div>
+</article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Rubén Balbastre. Published with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>

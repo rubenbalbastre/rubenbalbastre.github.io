@@ -522,6 +522,15 @@ img {
   background: var(--surface);
 }
 
+.blog-featured-text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.blog-featured-text-only .blog-featured-body {
+  max-width: 48rem;
+  min-height: 22rem;
+}
+
 .blog-featured-media {
   overflow: hidden;
   min-height: 100%;
